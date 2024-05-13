@@ -1,0 +1,299 @@
+/* PCスマホ共通スタイル */
+body{
+  font-family: "Source Sans Pro", "Hiragino Kaku Gothic ProN", Meiryo, Arial, sans-serif;
+}
+p{
+  font-size: 15px;
+}
+/* PC用スタイル */
+body{
+  max-width: 1080px;
+  min-width: 960px;
+  margin: 0 auto  0 auto;
+}
+/* ヘッダー */
+header{
+  /* 横にする */
+  display: flex;
+  /* 水平線両脇揃え */
+  justify-content: space-between;
+}
+/* ナビゲーションのレイアウト */
+#nav-pc{
+  font-size: 14px;
+  padding-top: 15px;
+}
+/* ナビゲーションのリンク装飾設定 */
+/* （＞直下の子要素に適応）*/
+#nav-pc > a{
+  text-decoration: none;
+  margin-left: 20px;
+}
+/* ここから疑似クラス～状態の時～ */
+/*（:link 訪問リンク)リンクを黒色に */
+#nav-pc > a:link{
+  color: #0d0d0d;
+}
+/*（:valid リンク)リンクを黒色に*/
+#nav-pc >a:valid{
+  color: #0d0d0d;
+}
+/*（:hover カーソルが乗った時）ラインを出す */
+#nav-pc >a:hover{
+  color: #0d0d0d;
+  text-decoration: underline;
+}
+/* （:active)アクティブ状態の時 */
+#nav-pc >a:active{
+  color: #0d0d0d;
+}
+
+/* ここからメインビジュアル */
+/* メッセージ背景の装飾（青背景） */
+#main-visual{
+  /* 子要素をabsoluteに指定する場合の親要素に記述するべきこと */
+  position: relative;
+  height: 400px;
+}
+#main-message{
+  /* 絶対位置 （親要素基準）*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #2710d5;
+  color: #ffffff;
+  /* 角丸 */
+  border-radius: 0 0  476px 0;
+  /* 最大幅 */
+  max-width: 620px;
+  height: 100%;
+  width: 100%;
+  /* 重なり */
+  z-index:  11;
+}
+/* メッセージ背景の装飾 （文字）*/
+#main-message > h1{
+  font-size: 60px;
+  font-weight: bold;
+  /* （余白）背景の中央あたりに配置調整 */
+  margin: 100px 0 0 50px;
+}
+#main-message > p{
+  font-size: 28px;
+  margin: 0 0 0 50px;
+}
+/* 写真画像の装飾 */
+#main-visual >img{
+  /* 最大幅 */
+  max-width: 620px;
+  /* 角丸 */
+  border-radius: 476px  0 0 0;
+  /* 絶対位置（親要素基準） */
+  position: absolute;
+  top: 0;
+
+  right: 0;
+  /* 重なり */
+  z-index: 10;
+}
+/* ミッション見出し */
+h2{
+  margin: 40px  0 0 0;
+}
+h2::after{
+  content: url(images/line.png);
+  margin-left: 10px;
+}
+h3{
+  font-size: 27px;
+}
+/* ミッション */
+#mission{
+  margin: 80px auto 80px  auto;
+  width: 100%;
+}
+/* 要素を中央寄せ 横並び*/
+#mission-flex{
+  width: 100%;
+  display: flex;
+  
+}
+/* 2つのdiv要素を半分に */
+#mission-flex > div{
+  width: 50%;
+  margin: 20px;
+}
+#mission-photo{
+  width: 100%;
+}
+#s2dgs{
+  margin-top: 50px;
+  width: 100%;
+}
+/* プロダクト */
+#product{
+  background-color: #fafafa;
+  margin: 80px 0 80px 0;
+  padding: 10px 40px 0px 40px;
+}
+/* 外枠 */
+#product > div{
+  margin-top: 40px;
+  display: flex;
+}
+/* 左のカラムdiv*/
+#product-left{
+  width: 50%;
+  margin-right: 20px;
+}
+/* 右のカラムdiv */
+#product-right{
+  width: 50%;
+  margin-left: 20px;
+  margin-top: 80px;
+}
+/* 画像＋説明の枠 */
+#product-left > div {
+  position: relative;
+  height: 480px;
+  margin-right: 20px; 
+}
+#product-right > div  {
+  position: relative;
+  height: 480px;
+  margin-left: 20px;
+}
+.product-photo {
+  width: 100%;
+}
+
+/* 説明文の枠 */
+.product-explain {
+  background-color: #ffffff;
+  position: absolute;
+  left: 0;
+  top: 280px;
+  margin: 0 40px 0 40px;
+  padding: 20px;
+  box-shadow: 5px 5px 10px  rgba(0, 0, 0, 0.05);
+}
+/* 説明文の英語 */
+.product-explain > span {
+  color: #2710d5;
+  font-weight: bold;
+  font-size: 16px;
+  margin: 0; 
+}
+/* 説明文の見出し */
+.product-explain > h3 {
+  font-size: 20px;
+  margin: 5px 0 5px 0;
+}
+/* 説明文 */
+.product-explain > p {
+  font-size: 14px;
+  margin: 0;
+}
+/* 「もっとみる」ボタン */
+#product-more {
+  margin:0  auto  -42px auto;
+}
+
+/* ABOUT  US */
+#aboutus{
+  margin: 80px auto 80px auto;
+}
+/*div内の表と画像を横並びにする */
+#aboutus > div {
+  display: flex;
+}
+/*画像1を親要素の幅いっぱいに。縦方向の揃え（上寄せ）*/
+.culture-img{
+  width: 100%;
+  align-self:flex-start;
+}
+/* 画像2余白を上に50px。親要素の幅いっぱいに。 */
+.culture-img2{
+  margin: 50px;
+  width: 100%;
+}
+/* 3つの組織文化の表と画像との間に余白を作る（文字小さくなる）*/
+.culture-table{
+    margin-right: 50px;
+}
+/* 番号 */
+.culture-num{
+  font-size: 80px;
+  color: #2710d5;
+  margin-right: 0 20px 0 0;
+}
+ /* 組織文化英語  フォントを縦並び */
+.culture-en{
+  color: #2710d5;
+  font-weight: bold;
+  font-size: 24px;
+  display: block;
+}
+/* 組織文化 日本語 */
+.culture-jp{
+  font-size: 20px;
+  font-weight: bold;
+}
+/* 説明文 */
+.culture-description{
+  margin: 0;
+}
+
+/* ビジョン */
+#vision{
+  margin: 80px auto 80px auto;
+}
+/* セクション内の外枠*/
+#vision > div {
+  width:  100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+/* 7つの行動指針の枠 */
+.vision-box {
+  width: 300px;
+  height: 300px;
+  margin-bottom: 30px;
+  position: relative;
+
+}
+.vision-box > img{
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 30;
+}
+.vision-box > span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 31;
+  margin-right: 20px;
+}
+.vision-box > span >  h4{
+  color: #2710d5;
+  font-size: 19px;
+  margin: 80px  0 0 0;
+}
+.vision-box > span >  h4::first-letter{
+  font-size: 40px;
+}
+.vision-box > span >  h5{
+  font-size: 20px;
+  margin: 0 0 0 0;
+}
+.vision-box > span >  p{
+  margin: 10px  0 0 0;
+}
+/* 会社概要 */
+#company {
+  margin: 80px auto 80px auto;
+}
